@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68vw;
+  max-width: 1400px;
+  height: 67vh;
+  max-height: 892px;
+  max-width: 1000px;
+  background: rgba(75, 123, 236, 0.7);
+  border-radius: 20px;
+  z-index: 200;
+  text-align: center;
+  color: white;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal__title {
+  font-family: "Yellowtail", cursive;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.modal__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 29.26px;
+  letter-spacing: 1%;
+}
+
+.modal__buttons-container {
+  width: 62%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .modal__select {
+  position: relative;
+  width: 48%;
+  height: 55px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #57606f;
+  background: #f1f2f6;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://stackoverflow.com/favicon.ico) 96% / 15% no-repeat
+    #eee;
+  padding-left: 10px;
+} */
+
+/* w3chool */
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #57606f;
+  width: 47%;
+  height: 55px;
+}
+
+.custom-select select {
+  display: none;
+
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background: #f1f2f6;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #57606f transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #57606f transparent;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  border-radius: 15px;
+  padding: 12px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  margin-top: 10px;
+  background-color: #f1f2f6;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 20px;
+  font-weight: 400;
+  color: black;
+  /* overflow: scroll; */
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(218, 218, 218, 1);
+}
+
+/* end w3 */
+
+/* .modal__select-selected {
+  background: #dadada;
+} */
+
+.modal__button {
+  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff5252;
+  border-radius: 15px;
+  width: 47%;
+  height: 55px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.modal__button:hover,
+.modal__button:active {
+  background: #e34545;
+}
+
+#continent {
+  display: block;
+  margin: 10px auto;
+  width: 300px;
+  height: 30px;
+}
+
+.country {
+  fill: #bfbaba;
+  stroke: #3e3e3e;
+  stroke-width: 0.30082097;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+}
+
+.lightOnHover:hover{
+  fill: #dc901d;
+  cursor: pointer;
+}
+
+
+
+.disabled{
+  fill: rgba(62, 62, 62, 1);
+  stroke: #3e3e3e;
+  stroke-width: 0.30082097;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  cursor: auto;
+}
+
+.correct {
+  fill: #94db94;
+}
+
+.correct:hover {
+  fill: #94db94;
+}
+
+#map {
+  display: block;
+  margin: 0 auto;
+  background: #74b9ff;
+  width:100%;
+  height:90%
+  
+}
+
+@media screen and (min-width: 1400px) {
+  .modal {
+    height: 63vh;
+  }
+
+  .modal__title {
+    font-size: 72px;
+  }
+
+  .modal__text {
+    font-size: 24px;
+  }
+
+  .select-selected,
+  .modal__button {
+    font-size: 24px;
+    border-radius: 20px;
+    height: 80px;
+  }
+}

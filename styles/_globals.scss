@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:active,
+a:visited,
+input,
+input:focus,
+input:active,
+button,
+button:focus,
+button:active {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+// Variables
+$text_color: #3E3E3E;
+
+body {
+    background-color: #7AB0FF;
+    font-family: 'Montserrat',
+        sans-serif;
+}

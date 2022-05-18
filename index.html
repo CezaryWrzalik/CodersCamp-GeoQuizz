@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map</title>
+    <link rel="stylesheet" href="/styles/App.scss">
+</head>
+<body>
+    <div class="mobile__info">
+        <div class="mobile__info--backdrop">
+            <div class="mobile__info--laptop"></div>
+            <p>This game is best played on devices with screens larger than 1024px ...</p>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+    <div class="background"></div>
+    <div class="modal">
+        <div class="modal__wrapper">
+            <h1 class="modal__title">World Map</h1>
+            <p class="modal__text">World Map is a simple playground for those who wants to
+                upgrade his geogprahical skillls and also find some new about coutries
+                of all over the world <img src="./static/assets/ui/smile.svg" class="modal__text--emoticon"
+                    alt="smiling emoticon">
+            </p>
+            <div class="modal__buttons--container">
+                <form action="#" class="form">
+                    <div class="select__group">
+                        <button class="select__group--button" id="button">
+                            <span id="select-label">Choose a region</span>
+                            <div class="arrow"><img src="./static/assets/ui/arrow.svg" alt="arrow"></div>
+                        </button>
+                        <div id="dropdown" class="select__group--dropdown hidden__dropdown">
+                            <label class="select__item" for="africa">Africa</label>
+                            <input class="option" id="africa" type="radio" name="continent" value="africa">
+                            
+                            <label class="select__item" for="asia">Asia</label>
+                            <input class="option" id="asia" type="radio" name="continent" value="asia">
+                            
+                            <label class="select__item" for="europe">Europe</label>
+                            <input class="option" id="europe" type="radio" name="continent" value="europe">
+                            
+                            <label class="select__item" for="north-america">North America</label>
+                            <input class="option" id="north-america" type="radio" name="continent" value="north-america">
+                            
+                            <label class="select__item" for="oceania">Oceania</label>
+                            <input class="option" id="oceania" type="radio" name="continent" value="oceania">
+                            
+                            <label class="select__item" for="south-america">South America</label>
+                            <input class="option" id="south-america" type="radio" name="continent" value="south-america">
+                        </div>
+                    </div>
+                </form>
+                <a class="modal__button"><img src="./static/assets/ui/rocket.svg" class="modal__button--icon"
+                        alt="rocket icon"> Get Started</a>
+            </div>
+        </div>
+    </div>
+    <script src="/src/index.js"></script>
+</body>
+
+</html>

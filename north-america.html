@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map</title>
+    <link rel="stylesheet" href="./styles/App.scss">
+</head>
+<body>
+    <main class="main">
+        <div class="mobile__info">
+            <div class="mobile__info--backdrop">
+                <div class="mobile__info--laptop"></div>
+                <p>This game is best played on devices with screens larger than 1024px ...</p>
+            </div>
+        </div>
+    <h1 style="text-align: center; color: blue;">North America</h1>
+    <div class="settings">
+        <img class="settings__icon" src="static/assets/ui/settings.svg" alt="settings" />
+        <div class="settings__menu">
+            <div class="settings__mode">
+                <div class="settings__menu-label">Dark mode</div>
+                <input class="switcher settings__switcher" type="checkbox" />
+            </div>
+            <div class="settings__lang">
+                <div class="settings__menu-label">Language</div>
+                <div class="settitngs__lang-wrap">
+                    <div class="settings__lang-item">
+                        <input class="radio-btn settings__radio-btn" type="radio" name="radio" id="en" checked />
+                        <label for="en">en</label>
+                    </div>
+                    <div class="settings__lang-item">
+                        <input class="radio-btn settings__radio-btn" type="radio" name="radio" id="pl" />
+                        <label for="pl">pl</label>
+                    </div>
+                </div>
+            </div>
+            <a class="settings__return" href="./index.html">Return</a>
+        </div>
+    </div>
+    <div class="info-modal">
+    
+    </div>
+    <div class="menu">
+        <img class="menu__arrow" src="static/assets/ui/menu-arrow.svg" alt="arrow" />
+        <div class="menu__inner">
+            <div class="menu__container">
+                <div class="menu__item" id="menu__weather">
+                    <p class="menu__item-text">Weather</p>
+                    <img class="menu__item-icon" src="static/assets/ui/weather.png" alt="weather" />
+                </div>
+                <div class="menu__item" id="menu__info">
+                    <img class="menu__item-icon" src="static/assets/ui/capitals.png" alt="capitals" />
+                </div>
+                <div class="menu__item" id="menu__quiz">
+                    <img class="menu__item-icon" src="static/assets/ui/quiz.png" alt="quiz" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <script src="./src/app/continent.js"></script>
+</body>
+</html>

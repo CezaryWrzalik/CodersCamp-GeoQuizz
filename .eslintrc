@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base","plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": ["error"],
+    "linebreak-style": 0,
+    "no-new": 0,
+    "no-plusplus": 0,
+    "no-use-before-define": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "location": true
+  }
+}

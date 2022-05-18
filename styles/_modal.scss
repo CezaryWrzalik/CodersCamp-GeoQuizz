@@ -1,0 +1,44 @@
+.modalWindow {
+  display: none;
+  position: absolute;
+  z-index: 0;
+  left: 2.5%;
+  top: 35vh;
+  width: 30%;
+  height: 30%;
+  margin: 0 auto;
+  background-color: yellowgreen;
+  border-radius: 2vh;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 5vh;
+  animation-name: appearing;
+  animation-duration: 0.8s;
+
+  #modalContent{
+    position: relative;
+    width:80%;
+    margin:10%;
+    text-align: center;
+    font-size: 5vh;
+  }
+
+  .modal__close{
+    position: absolute;
+    width:3vh;
+    height: 3vh;
+    right: 1.5vh;
+    top: 1.5vh;
+    background-image: url("../static/assets/ui/close.png");
+    background-size: contain, cover;
+  }
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
